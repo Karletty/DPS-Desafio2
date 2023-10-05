@@ -12,7 +12,7 @@ export const Login = () => {
 
      const handleLogin = () => {
           if (user.pass && user.user) {
-               if (users.find(u => (u.name === user.user || u.email === user.user) && u.password === user.pass)) {
+               if (users.find(u => (u.name === user.user || u.email === user.user) && u.pass === user.pass)) {
                     navigation.navigate("Dashboard");
                } else {
                     alert("Credenciales incorrectas");
