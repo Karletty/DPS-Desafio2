@@ -8,19 +8,7 @@ import { ContactsProvider } from "../../contexts/ContactsContex";
 
 const Stack = createNativeStackNavigator();
 
-const storeInitialUsers = async () => {
-     try {
-          await AsyncStorage.setItem("users", JSON.stringify(initialUsers));
-     } catch (error) {
-          console.error('Error al almacenar usuarios:', error);
-     }
-}
-
 const NavigationStack = () => {
-     useEffect(() => {
-          storeInitialUsers();
-     }, []);
-
      return (
           <AuthProvider><ContactsProvider>
                <NavigationContainer>
