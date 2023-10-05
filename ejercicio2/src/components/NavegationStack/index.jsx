@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Login, Register, Dashboard, AddContact } from "../../pages";
-import { users as initialUsers } from "../../constants/users";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AuthProvider } from "../../contexts/AuthContext";
 import { ContactsProvider } from "../../contexts/ContactsContex";
